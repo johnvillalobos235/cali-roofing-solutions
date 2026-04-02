@@ -171,8 +171,13 @@ const siteConfig: SiteConfig = {
   },
 
   hero: {
-    backgroundType: "image",
+    backgroundType: "video",
     image: "/images/hero.webp",
+    video: {
+      type: "youtube",
+      src: "https://www.youtube.com/watch?v=zrlxDmSq-Zo",
+      poster: "/images/hero.webp",
+    },
     headline: "TRANSPARENT ROOFING SOLUTIONS DELIVERED WITH SPEED",
     subheadline:
       "From repairs to replacements, installations to inspections — we bring precision, style, and quality craftsmanship to every project.",
