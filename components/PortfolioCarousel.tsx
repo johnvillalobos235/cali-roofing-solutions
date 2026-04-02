@@ -82,21 +82,21 @@ export default function PortfolioCarousel() {
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          className={`flex items-center gap-4 overflow-x-auto no-scrollbar select-none ${
+          className={`flex items-center gap-6 overflow-x-auto no-scrollbar select-none ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
         >
           {portfolioImages.map((src, i) => (
             <div
               key={i}
-              className="relative shrink-0 w-[420px] h-[300px] overflow-hidden rounded-3xl transition-all duration-500 ease-out"
+              className="relative shrink-0 w-[480px] h-[380px] overflow-hidden rounded-3xl transition-all duration-500 ease-out shadow-lg"
             >
               <Image
                 src={src}
                 alt={`Project ${i + 1}`}
                 fill
                 className="object-cover pointer-events-none"
-                sizes="420px"
+                sizes="480px"
                 draggable={false}
               />
             </div>
