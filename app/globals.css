@@ -1,35 +1,24 @@
 @import "tailwindcss";
 
-:root {
-  --color-primary: 30 58 138;
-  --color-primary-light: 59 130 246;
-  --color-accent: 30 58 138;
-  --color-neutral-950: 2 6 23;
-  --color-neutral-900: 15 23 42;
-  --color-neutral-800: 30 41 59;
-  --color-neutral-600: 71 85 105;
-  --color-neutral-500: 100 116 139;
-  --color-neutral-400: 148 163 184;
-  --color-neutral-50: 248 250 252;
-}
-
 @theme inline {
-  --font-sans: var(--font-sans);
-  --color-primary: rgb(var(--color-primary));
-  --color-primary-light: rgb(var(--color-primary-light));
-  --color-accent: rgb(var(--color-accent));
-  --color-n-950: rgb(var(--color-neutral-950));
-  --color-n-900: rgb(var(--color-neutral-900));
-  --color-n-800: rgb(var(--color-neutral-800));
-  --color-n-600: rgb(var(--color-neutral-600));
-  --color-n-500: rgb(var(--color-neutral-500));
-  --color-n-400: rgb(var(--color-neutral-400));
-  --color-n-50: rgb(var(--color-neutral-50));
+  --font-sans: var(--font-sans-var);
+
+  --color-primary: #d8613c;
+  --color-primary-light: #e8825e;
+  --color-accent: #3199f7;
+
+  --color-n-950: #020617;
+  --color-n-900: #111111;
+  --color-n-800: #1e293b;
+  --color-n-600: #475569;
+  --color-n-500: #64748b;
+  --color-n-400: #94a3b8;
+  --color-n-50: #f9f9f9;
 }
 
 body {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  color: rgb(var(--color-neutral-900));
+  font-family: var(--font-sans-var), ui-sans-serif, system-ui, sans-serif;
+  color: #111111;
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -74,9 +63,9 @@ body {
 .hero-gradient {
   background: linear-gradient(
     to right,
-    rgb(var(--color-primary) / 0.6),
-    rgb(var(--color-neutral-900) / 0.55),
-    rgb(var(--color-neutral-950) / 0.6)
+    rgba(216, 97, 60, 0.6),
+    rgba(17, 17, 17, 0.55),
+    rgba(2, 6, 23, 0.6)
   );
 }
 

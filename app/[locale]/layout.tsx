@@ -55,26 +55,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const messages = await getMessages(locale);
 
-  // Generate CSS custom properties from config
-  const cssVars = {
-    "--color-primary": siteConfig.theme.colors.primary,
-    "--color-primary-light": siteConfig.theme.colors.primaryLight,
-    "--color-accent": siteConfig.theme.colors.accent,
-    "--color-neutral-950": siteConfig.theme.colors.neutral[950],
-    "--color-neutral-900": siteConfig.theme.colors.neutral[900],
-    "--color-neutral-800": siteConfig.theme.colors.neutral[800],
-    "--color-neutral-600": siteConfig.theme.colors.neutral[600],
-    "--color-neutral-500": siteConfig.theme.colors.neutral[500],
-    "--color-neutral-400": siteConfig.theme.colors.neutral[400],
-    "--color-neutral-50": siteConfig.theme.colors.neutral[50],
-  } as React.CSSProperties;
-
   return (
     <html lang={locale} className={`${inter.variable} h-full`}>
-      <body
-        className="min-h-full flex flex-col antialiased"
-        style={cssVars}
-      >
+      <body className="min-h-full flex flex-col antialiased">
         <Header locale={locale} messages={messages} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} messages={messages} />

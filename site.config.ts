@@ -261,12 +261,16 @@ const siteConfig: SiteConfig = {
 
   portfolio: {
     images: [
-      { src: "/images/portfolio/1.webp", alt: "Residential roof replacement" },
-      { src: "/images/portfolio/2.webp", alt: "Tile roofing project" },
-      { src: "/images/portfolio/3.webp", alt: "Before and after roof transformation" },
-      { src: "/images/portfolio/4.webp", alt: "Aerial view of completed roof" },
-      { src: "/images/portfolio/5.webp", alt: "Shingle roof installation" },
-      { src: "/images/portfolio/6.webp", alt: "Commercial roofing project" },
+      { src: "/images/portfolio/1.webp", alt: "Before and after roof replacement" },
+      { src: "/images/portfolio/2.webp", alt: "Residential roof transformation" },
+      { src: "/images/portfolio/3.webp", alt: "Completed roofing project aerial view" },
+      { src: "/images/portfolio/4.webp", alt: "Roof installation in progress" },
+      { src: "/images/portfolio/5.webp", alt: "Shingle roof close-up" },
+      { src: "/images/portfolio/6.webp", alt: "Finished residential roofing" },
+      { src: "/images/portfolio/7.webp", alt: "Tile roofing project" },
+      { src: "/images/portfolio/8.webp", alt: "Commercial roofing work" },
+      { src: "/images/portfolio/9.webp", alt: "Meet the Cali Roofing team" },
+      { src: "/images/portfolio/10.webp", alt: "Emergency roof service" },
     ],
   },
 
