@@ -3,15 +3,15 @@
 @theme inline {
   --font-sans: var(--font-sans-var);
 
-  /* Brand - Cali Roofing terracotta/warm palette */
-  --color-primary: #d8613c;
-  --color-primary-light: #e8825e;
-  --color-accent: #3199f7;
+  /* Brand - Cali Roofing blue-forward like maazroofing */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-accent: #d8613c;
 
-  /* Neutral scale - dark moody palette matching maazroofing feel */
-  --color-n-950: #0a0a0a;
-  --color-n-900: #111113;
-  --color-n-800: #1c1c1f;
+  /* Neutral scale - blue-tinted dark palette matching maazroofing */
+  --color-n-950: #020617;
+  --color-n-900: #0f172a;
+  --color-n-800: #1e293b;
   --color-n-700: #2a2a2e;
   --color-n-600: #52525b;
   --color-n-500: #71717a;
@@ -58,10 +58,10 @@ body {
 /* ── Hero gradient overlay ── */
 .hero-gradient {
   background: linear-gradient(
-    135deg,
-    rgba(10, 10, 10, 0.82) 0%,
-    rgba(10, 10, 10, 0.55) 40%,
-    rgba(216, 97, 60, 0.18) 100%
+    to right,
+    rgba(30, 58, 138, 0.6),
+    rgba(15, 23, 42, 0.55),
+    rgba(2, 6, 23, 0.6)
   );
 }
 
@@ -81,6 +81,6 @@ html {
 
 /* ── Selection color ── */
 ::selection {
-  background: rgba(216, 97, 60, 0.25);
+  background: rgba(37, 99, 235, 0.25);
   color: inherit;
 }
