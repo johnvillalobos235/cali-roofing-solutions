@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "region": "Southern California",
+    "headline": "TRANSPARENT ROOFING SOLUTIONS DELIVERED WITH SPEED",
+    "subheadline": "From repairs to replacements, installations to inspections — we bring precision, style, and quality craftsmanship to every project.",
+    "cta_primary": "Get Free Estimate",
+    "cta_secondary": "View Our Work"
+  },
+  "about": {
+    "kicker": "About Us",
+    "title": "Welcome to Cali Roofing Solutions",
+    "description": "We are a family-owned and operated business based in Southern California — bonded, insured, and licensed by the California State License Board. Our mission is to deliver top-quality roofing services at the BEST prices. No pushy salesmen — everything is done in-house. Trust is earned, not sold.",
+    "highlights": [
+      "Bonded, insured & licensed by CA State License Board",
+      "Family-owned — everything done in-house",
+      "100% free estimates, best prices guaranteed",
+      "Before & after photo documentation"
+    ],
+    "cta": "Get a Free Estimate"
+  },
+  "services": {
+    "kicker": "Our Services",
+    "title": "Services",
+    "subtitle": "Comprehensive roofing solutions for residential and commercial properties across Southern California",
+    "cta": "Request a quote",
+    "items": {
+      "replacement": {
+        "title": "Roof Replacement",
+        "description": "Complete roof replacements with lifetime warranty",
+        "features": ["Asphalt shingles, metal, and tile options", "Lifetime roof replacement warranty", "Most replacements completed in about a week"]
+      },
+      "repair": {
+        "title": "Roof Repair",
+        "description": "Expert repair services for all roof types",
+        "features": ["Leak detection and repair", "Storm damage restoration", "Free inspection & detailed estimate"]
+      },
+      "installation": {
+        "title": "Roof Installation",
+        "description": "New construction and addition roofing",
+        "features": ["Quality materials for lasting durability", "Comprehensive warranty coverage", "Stress-free process with reliable timelines"]
+      },
+      "inspection": {
+        "title": "Roof Inspection",
+        "description": "Thorough inspections with detailed reports",
+        "features": ["Drone-assisted aerial inspection", "Detailed photo documentation", "Free for all homeowners"]
+      },
+      "commercial": {
+        "title": "Commercial Roofing",
+        "description": "Full-service commercial roofing solutions",
+        "features": ["TPO, PVC, and modified bitumen systems", "Minimal business disruption", "Preventative maintenance programs"]
+      },
+      "emergency": {
+        "title": "Emergency Roof Service",
+        "description": "24/7 emergency response for urgent roof issues",
+        "features": ["Rapid response times", "Temporary tarping and leak stop", "Insurance claim assistance"]
+      }
+    }
+  },
+  "portfolio": {
+    "kicker": "Our Work",
+    "title": "Recent Projects",
+    "subtitle": "See the quality of our residential and commercial roofing work across Southern California"
+  },
+  "stats": {
+    "projects": "5-Star Reviews",
+    "clients": "Years Experience",
+    "years": "Free Estimates"
+  },
+  "whyUs": {
+    "kicker": "Why us",
+    "title": "The roofers your neighbors would recommend",
+    "description": "At Cali Roofing Solutions, we believe trust is earned, not sold. That's why we've built our family-owned reputation on one simple principle: treat every home like it's our own.",
+    "pillars": {
+      "quality": { "title": "Unmatched Craftsmanship", "description": "Skilled, certified professionals delivering quality on every project." },
+      "transparency": { "title": "Transparent Communication", "description": "Open lines and honest updates throughout your entire project." },
+      "integrity": { "title": "Customer-Centric", "description": "Tailored services for your unique needs — no pushy salesmen." },
+      "experience": { "title": "Respect Your Time", "description": "We treat your home and schedule with the care they deserve." }
+    },
+    "cta": "Get started today"
+  },
+  "testimonials": {
+    "kicker": "Testimonials",
+    "title": "What our customers say",
+    "subtitle": "5.0 out of 5 stars based on 82 Google reviews. See why homeowners across Southern California trust us."
+  },
+  "cta_banner": {
+    "headline": "Ready to get started with a free roof inspection?",
+    "description": "No pushy salesmen, no hidden fees. Just honest, quality roofing from a family that cares.",
+    "button": "Schedule my free inspection"
+  },
+  "contact": {
+    "kicker": "Get in touch",
+    "title": "Contact Us",
+    "subtitle": "Message us for your free consultation. We'll reach out within one business day.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "How can we help?",
+      "submit": "Send message",
+      "success": "Thanks! We received your message and will be in touch shortly."
+    },
+    "info": {
+      "phone_label": "Phone",
+      "email_label": "Email",
+      "areas_label": "Service Areas",
+      "hours_label": "Business Hours",
+      "license_label": "License"
+    }
+  },
+  "footer": {
+    "description": "Family-owned and operated. Bonded, insured, and licensed. The roofers your neighbors would recommend.",
+    "quick_links": "Quick Links",
+    "contact_title": "Contact",
+    "rights": "All rights reserved.",
+    "credentials": "Bonded & Insured • Free Estimates"
+  }
+}

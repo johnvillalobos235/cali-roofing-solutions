@@ -1,0 +1,55 @@
+{
+  "nav": { "home": "Inicio", "services": "Servicios", "portfolio": "Portafolio", "contact": "Contacto" },
+  "hero": {
+    "region": "Sur de California",
+    "headline": "SOLUCIONES DE TECHADO TRANSPARENTES ENTREGADAS CON RAPIDEZ",
+    "subheadline": "De reparaciones a reemplazos, instalaciones a inspecciones — traemos precisión, estilo y artesanía de calidad a cada proyecto.",
+    "cta_primary": "Estimado Gratis",
+    "cta_secondary": "Ver Nuestro Trabajo"
+  },
+  "about": {
+    "kicker": "Sobre Nosotros",
+    "title": "Bienvenido a Cali Roofing Solutions",
+    "description": "Somos un negocio familiar con base en el sur de California — con fianza, asegurados y licenciados por la Junta de Licencias del Estado de California. Nuestra misión es ofrecer servicios de techado de la más alta calidad a los MEJORES precios. Sin vendedores agresivos — todo se hace internamente.",
+    "highlights": ["Con fianza, asegurados y licenciados por el estado de CA", "Empresa familiar — todo hecho internamente", "Estimados 100% gratis, mejores precios garantizados", "Documentación fotográfica de antes y después"],
+    "cta": "Obtener Estimado Gratis"
+  },
+  "services": {
+    "kicker": "Nuestros Servicios",
+    "title": "Servicios",
+    "subtitle": "Soluciones completas de techado para propiedades residenciales y comerciales en todo el sur de California",
+    "cta": "Solicitar cotización",
+    "items": {
+      "replacement": { "title": "Reemplazo de Techo", "description": "Reemplazos completos con garantía de por vida", "features": ["Opciones de tejas, metal y teja", "Garantía de reemplazo de por vida", "La mayoría completados en una semana"] },
+      "repair": { "title": "Reparación de Techo", "description": "Servicios expertos de reparación para todos los tipos", "features": ["Detección y reparación de fugas", "Restauración por daños de tormenta", "Inspección gratis y estimado detallado"] },
+      "installation": { "title": "Instalación de Techo", "description": "Techado para nueva construcción y adiciones", "features": ["Materiales de calidad para durabilidad", "Cobertura de garantía integral", "Proceso sin estrés con plazos confiables"] },
+      "inspection": { "title": "Inspección de Techo", "description": "Inspecciones exhaustivas con reportes detallados", "features": ["Inspección aérea con drones", "Documentación fotográfica detallada", "Gratis para todos los propietarios"] },
+      "commercial": { "title": "Techado Comercial", "description": "Soluciones completas de techado comercial", "features": ["Sistemas TPO, PVC y bitumen modificado", "Mínima interrupción al negocio", "Programas de mantenimiento preventivo"] },
+      "emergency": { "title": "Servicio de Emergencia", "description": "Respuesta de emergencia 24/7 para problemas urgentes", "features": ["Tiempos de respuesta rápidos", "Lonas temporales y detención de fugas", "Asistencia con reclamos de seguro"] }
+    }
+  },
+  "portfolio": { "kicker": "Nuestro Trabajo", "title": "Proyectos Recientes", "subtitle": "Vea la calidad de nuestro trabajo residencial y comercial en todo el sur de California" },
+  "stats": { "projects": "Reseñas 5 Estrellas", "clients": "Años de Experiencia", "years": "Estimados Gratis" },
+  "whyUs": {
+    "kicker": "Por qué elegirnos",
+    "title": "Los techadores que sus vecinos recomendarían",
+    "description": "En Cali Roofing Solutions, creemos que la confianza se gana, no se vende. Por eso hemos construido nuestra reputación familiar sobre un principio simple: tratar cada hogar como si fuera el nuestro.",
+    "pillars": {
+      "quality": { "title": "Artesanía Inigualable", "description": "Profesionales capacitados y certificados entregando calidad en cada proyecto." },
+      "transparency": { "title": "Comunicación Transparente", "description": "Líneas abiertas y actualizaciones honestas durante todo su proyecto." },
+      "integrity": { "title": "Centrados en el Cliente", "description": "Servicios personalizados para sus necesidades únicas — sin vendedores agresivos." },
+      "experience": { "title": "Respetamos Su Tiempo", "description": "Tratamos su hogar y su horario con el cuidado que merecen." }
+    },
+    "cta": "Comience hoy"
+  },
+  "testimonials": { "kicker": "Testimonios", "title": "Lo que dicen nuestros clientes", "subtitle": "5.0 de 5 estrellas basado en 82 reseñas de Google." },
+  "cta_banner": { "headline": "¿Listo para una inspección de techo gratuita?", "description": "Sin vendedores agresivos, sin cargos ocultos. Solo techado honesto y de calidad de una familia que se preocupa.", "button": "Agendar mi inspección gratuita" },
+  "contact": {
+    "kicker": "Contáctenos",
+    "title": "Contáctenos",
+    "subtitle": "Envíenos un mensaje para su consulta gratuita. Nos comunicaremos dentro de un día hábil.",
+    "form": { "name": "Nombre completo", "email": "Correo", "phone": "Teléfono", "message": "¿Cómo podemos ayudarle?", "submit": "Enviar mensaje", "success": "¡Gracias! Recibimos su mensaje y nos pondremos en contacto pronto." },
+    "info": { "phone_label": "Teléfono", "email_label": "Correo", "areas_label": "Áreas de Servicio", "hours_label": "Horario", "license_label": "Licencia" }
+  },
+  "footer": { "description": "Empresa familiar. Con fianza, asegurados y licenciados. Los techadores que sus vecinos recomendarían.", "quick_links": "Enlaces Rápidos", "contact_title": "Contacto", "rights": "Todos los derechos reservados.", "credentials": "Con Fianza y Asegurados • Estimados Gratis" }
+}

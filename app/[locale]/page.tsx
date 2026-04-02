@@ -1,31 +1,33 @@
-import Hero from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
-import ServicesAccordion from "@/components/ServicesAccordion";
-import RoofingTypes from "@/components/RoofingTypes";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import HowWeWork from "@/components/HowWeWork";
-import StatsSection from "@/components/StatsSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import FinancingCTA from "@/components/FinancingCTA";
-import PortfolioCarousel from "@/components/PortfolioCarousel";
-import BeforeAfter from "@/components/BeforeAfter";
-import ContactSection from "@/components/ContactSection";
+import { getMessages } from "@/i18n";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import ServicesGrid from "@/components/sections/ServicesGrid";
+import PortfolioCarousel from "@/components/sections/PortfolioCarousel";
+import Statistics from "@/components/sections/Statistics";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import Testimonials from "@/components/sections/Testimonials";
+import CtaBanner from "@/components/sections/CtaBanner";
+import ContactForm from "@/components/sections/ContactForm";
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const messages = await getMessages(locale);
+
   return (
     <>
-      <Hero />
-      <AboutSection />
-      <ServicesAccordion />
-      <RoofingTypes />
-      <WhyChooseUs />
-      <HowWeWork />
-      <StatsSection />
-      <TestimonialsSection />
-      <FinancingCTA />
-      <PortfolioCarousel />
-      <BeforeAfter />
-      <ContactSection />
+      <Hero locale={locale} messages={messages} />
+      <About locale={locale} messages={messages} />
+      <ServicesGrid messages={messages} />
+      <PortfolioCarousel messages={messages} />
+      <Statistics messages={messages} />
+      <WhyChooseUs locale={locale} messages={messages} />
+      <Testimonials messages={messages} />
+      <CtaBanner locale={locale} messages={messages} />
+      <ContactForm messages={messages} />
     </>
   );
 }

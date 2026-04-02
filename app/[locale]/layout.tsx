@@ -1,41 +1,83 @@
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { Inter } from "next/font/google";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FloatingNav from "@/components/FloatingNav";
+import { inter } from "@/lib/fonts";
+import { getMessages, locales } from "@/i18n";
+import siteConfig from "@/site.config";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
+type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
-}) {
+};
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: {
+      default: siteConfig.company.name,
+      template: siteConfig.seo.titleTemplate,
+    },
+    description: siteConfig.seo.defaultDescription,
+    metadataBase: new URL(siteConfig.seo.canonical),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `/${l}`])
+      ),
+    },
+    openGraph: {
+      title: siteConfig.company.name,
+      description: siteConfig.seo.defaultDescription,
+      url: siteConfig.seo.canonical,
+      siteName: siteConfig.company.name,
+      locale: locale,
+      type: "website",
+    },
+    robots: { index: true, follow: true },
+  };
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as "en" | "es")) {
+  if (!locales.includes(locale)) {
     notFound();
   }
 
-  const messages = await getMessages();
+  const messages = await getMessages(locale);
+
+  // Generate CSS custom properties from config
+  const cssVars = {
+    "--color-primary": siteConfig.theme.colors.primary,
+    "--color-primary-light": siteConfig.theme.colors.primaryLight,
+    "--color-accent": siteConfig.theme.colors.accent,
+    "--color-neutral-950": siteConfig.theme.colors.neutral[950],
+    "--color-neutral-900": siteConfig.theme.colors.neutral[900],
+    "--color-neutral-800": siteConfig.theme.colors.neutral[800],
+    "--color-neutral-600": siteConfig.theme.colors.neutral[600],
+    "--color-neutral-500": siteConfig.theme.colors.neutral[500],
+    "--color-neutral-400": siteConfig.theme.colors.neutral[400],
+    "--color-neutral-50": siteConfig.theme.colors.neutral[50],
+  } as React.CSSProperties;
 
   return (
-    <html lang={locale} className={`${inter.variable} antialiased`}>
-      <body className="min-h-dvh font-sans text-slate-900">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <FloatingNav />
-          <main>{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
+    <html lang={locale} className={`${inter.variable} h-full`}>
+      <body
+        className="min-h-full flex flex-col antialiased"
+        style={cssVars}
+      >
+        <Header locale={locale} messages={messages} />
+        <main className="flex-1">{children}</main>
+        <Footer locale={locale} messages={messages} />
       </body>
     </html>
   );

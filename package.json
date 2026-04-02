@@ -1,21 +1,36 @@
 {
-  "name": "roofing-website",
+  "name": "maaz-skeleton",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "qa": "npm run qa:types && npm run qa:lint && npm run qa:build",
+    "qa:types": "tsc --noEmit",
+    "qa:lint": "eslint src/",
+    "qa:build": "next build",
+    "qa:test": "npx playwright test --project=desktop",
+    "qa:test:all": "npx playwright test",
+    "qa:screenshots": "npx playwright test --project=screenshots",
+    "qa:lighthouse": "node scripts/lighthouse.mjs",
+    "qa:a11y": "npx playwright test tests/a11y/",
+    "test": "npx playwright test --project=desktop"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
     "lucide-react": "^1.7.0",
     "next": "16.2.2",
-    "next-intl": "^4.9.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.5.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "@playwright/test": "^1.59.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

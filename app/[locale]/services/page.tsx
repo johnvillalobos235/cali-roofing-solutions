@@ -1,18 +1,42 @@
-"use client";
+import type { Metadata } from "next";
+import { getMessages, t } from "@/i18n";
+import Hero from "@/components/sections/Hero";
+import ServicesGrid from "@/components/sections/ServicesGrid";
+import CtaBanner from "@/components/sections/CtaBanner";
 
-import { useTranslations } from "next-intl";
-import SubpageHero from "@/components/SubpageHero";
-import ServicesAccordion from "@/components/ServicesAccordion";
-import RoofingTypes from "@/components/RoofingTypes";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = await getMessages(locale);
+  return {
+    title: t(messages, "services.title"),
+  };
+}
 
-export default function ServicesPage() {
-  const t = useTranslations("servicesPage");
+export default async function ServicesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const messages = await getMessages(locale);
 
   return (
     <>
-      <SubpageHero title={t("title")} subtitle={t("subtitle")} />
-      <ServicesAccordion />
-      <RoofingTypes />
+      <Hero
+        locale={locale}
+        messages={messages}
+        kicker={t(messages, "services.kicker")}
+        title={t(messages, "services.title")}
+        subtitle={t(messages, "services.subtitle")}
+        image="/images/hero-services.webp"
+        showCtas={false}
+      />
+      <ServicesGrid messages={messages} showHeading={false} />
+      <CtaBanner locale={locale} messages={messages} />
     </>
   );
 }
