@@ -24,8 +24,8 @@
 
 /* Section spacing */
 .section {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 @media (max-width: 768px) {

@@ -34,16 +34,15 @@ export default function GalleryPage() {
       <SubpageHero title={t("pageTitle")} subtitle={t("pageSubtitle")} />
       <section className="section">
         <div className="container-narrow">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {galleryImages.map((src, i) => (
               <ScrollReveal key={i} delay={(i % 6) * 50}>
-                <div className="group relative w-full overflow-hidden rounded-2xl bg-slate-100 block break-inside-avoid">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100">
                   <Image
                     src={src}
                     alt={`Roofing project ${i + 1}`}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>

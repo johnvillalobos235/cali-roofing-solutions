@@ -50,20 +50,20 @@ export default function ContactSection() {
                 className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-3"
               >
                 <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-slate-400" />
+                  <MapPin className="h-4 w-4 text-slate-300" />
                   {area}
                 </h3>
                 <div className="space-y-2">
                   <a
                     href="tel:+19517431437"
-                    className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
+                    className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors"
                   >
                     <Phone className="h-3.5 w-3.5" />
                     (951) 743-1437
                   </a>
                   <a
                     href="mailto:caliroofingsolutions@gmail.com"
-                    className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors truncate"
+                    className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors truncate"
                   >
                     <Mail className="h-3.5 w-3.5 shrink-0" />
                     caliroofingsolutions@gmail.com
@@ -75,10 +75,10 @@ export default function ContactSection() {
             {/* Business Hours Card */}
             <div className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-3">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                <Clock className="h-4 w-4 text-slate-400" />
+                <Clock className="h-4 w-4 text-slate-300" />
                 {t("hours")}
               </h3>
-              <div className="space-y-1.5 text-sm text-slate-400">
+              <div className="space-y-1.5 text-sm text-slate-300">
                 <p>{t("monFri")}</p>
                 <p>{t("sat")}</p>
                 <p>{t("sun")}</p>

@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="max-w-2xl">
           <h1 className="flex flex-col leading-none drop-shadow-[0_8px_24px_rgba(15,23,42,0.7)]">
             <span
-              className={`text-xs font-semibold uppercase tracking-[0.35em] text-white/50 transition-all duration-700 ${
+              className={`text-xs font-semibold uppercase tracking-[0.35em] text-white/60 transition-all duration-700 ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
               }`}
             >
@@ -70,7 +70,7 @@ export default function Hero() {
             </span>
           </h1>
           <p
-            className={`mt-6 max-w-md text-sm text-white/60 leading-relaxed transition-all duration-700 delay-[600ms] ${
+            className={`mt-6 max-w-md text-sm text-white/70 leading-relaxed transition-all duration-700 delay-[600ms] ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
             }`}
           >

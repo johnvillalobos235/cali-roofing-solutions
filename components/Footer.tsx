@@ -31,7 +31,7 @@ export default function Footer() {
                 className="object-contain object-left"
               />
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-300 leading-relaxed">
               {t("description")}
             </p>
             <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">

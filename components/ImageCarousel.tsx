@@ -9,6 +9,7 @@ interface ImageCarouselProps {
   autoPlay?: boolean;
   interval?: number;
   className?: string;
+  aspectRatio?: string;
 }
 
 export default function ImageCarousel({
@@ -16,6 +17,7 @@ export default function ImageCarousel({
   autoPlay = true,
   interval = 4000,
   className = "",
+  aspectRatio = "aspect-[4/3]",
 }: ImageCarouselProps) {
   const [current, setCurrent] = useState(0);
   const [playing, setPlaying] = useState(autoPlay);
@@ -37,7 +39,7 @@ export default function ImageCarousel({
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl bg-slate-100 ${className}`}>
       {/* Images */}
-      <div className="relative aspect-[4/3]">
+      <div className={`relative ${aspectRatio}`}>
         {images.map((src, i) => (
           <Image
             key={src}

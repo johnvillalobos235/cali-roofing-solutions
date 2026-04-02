@@ -37,7 +37,7 @@ export default function HowWeWork() {
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-400 mb-2 text-center">
             {t("label")}
           </p>
-          <h2 className="text-[36px] font-semibold leading-tight text-white md:text-[48px] text-center mb-16">
+          <h2 className="text-[36px] font-semibold leading-tight text-white md:text-[48px] text-center mb-12">
             {t("title")}
           </h2>
         </ScrollReveal>
@@ -46,13 +46,13 @@ export default function HowWeWork() {
           {steps.map((step, i) => (
             <ScrollReveal key={step.key} delay={i * 150}>
               <div className="text-center space-y-4">
-                <div className="mx-auto relative h-24 w-24 rounded-full overflow-hidden ring-2 ring-white/10">
+                <div className="mx-auto relative h-20 w-20 rounded-full overflow-hidden ring-2 ring-white/10">
                   <Image
                     src={step.icon}
                     alt={t(`${step.key}.title`)}
                     fill
                     className="object-cover"
-                    sizes="96px"
+                    sizes="80px"
                   />
                 </div>
                 <div className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white text-slate-900 text-sm font-bold shadow-lg">
@@ -61,7 +61,7 @@ export default function HowWeWork() {
                 <h3 className="text-lg font-semibold text-white">
                   {t(`${step.key}.title`)}
                 </h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
+                <p className="text-sm text-slate-300 leading-relaxed">
                   {t(`${step.key}.description`)}
                 </p>
               </div>

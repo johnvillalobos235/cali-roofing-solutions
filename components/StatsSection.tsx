@@ -26,7 +26,7 @@ export default function StatsSection() {
       <div className="container-narrow">
         {/* Stats Grid */}
         <ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-4xl md:text-5xl font-bold text-slate-900">

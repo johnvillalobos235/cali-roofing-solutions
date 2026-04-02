@@ -53,7 +53,7 @@ export default function TestimonialsSection() {
 
         {/* Video Testimonials */}
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {youtubeVideos.map((video) => (
               <div key={video.id} className="space-y-3">
                 <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-200">
@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
             {currentReviews.map((src, i) => (
               <div
                 key={page * perPage + i}
-                className="rounded-2xl overflow-hidden shadow-lg bg-white border border-slate-100"
+                className="rounded-2xl overflow-hidden shadow-sm bg-white border border-slate-100"
               >
                 <Image
                   src={src}
