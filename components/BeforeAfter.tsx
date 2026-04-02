@@ -6,7 +6,6 @@ import ImageCarousel from "./ImageCarousel";
 const images = [
   "https://caliroofingsolutions.com/wp-content/uploads/2025/12/aa-before-2.png",
   "https://caliroofingsolutions.com/wp-content/uploads/2025/12/aa-before-3.png",
-  "https://caliroofingsolutions.com/wp-content/uploads/2025/12/aaa-before-roofing-logo.png",
 ];
 
 export default function BeforeAfter() {
