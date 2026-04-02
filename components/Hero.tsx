@@ -81,12 +81,14 @@ export default function Hero() {
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
             }`}
           >
-            <Link
-              href={`/${locale}/contact`}
-              className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black shadow-lg backdrop-blur hover:bg-zinc-100 transition-colors"
+            <a
+              href="https://app.roofr.com/instant-estimator/09a432b4-f154-4013-8baa-893cf71f5d8c/CaliRoofingSolutions/welcome-question"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/30 hover:bg-blue-500 transition-colors"
             >
               {t("getQuote")}
-            </Link>
+            </a>
             <Link
               href={`/${locale}/gallery`}
               className="inline-flex items-center justify-center rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur border border-white/20 hover:bg-white/20 transition-colors"

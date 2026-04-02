@@ -35,13 +35,15 @@ export default function AboutSection() {
                 </li>
               ))}
             </ul>
-            <Link
-              href={`/${locale}/contact`}
+            <a
+              href="https://app.roofr.com/instant-estimator/09a432b4-f154-4013-8baa-893cf71f5d8c/CaliRoofingSolutions/welcome-question"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-slate-700"
             >
               {t("cta")}
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </div>
         </ScrollReveal>
 

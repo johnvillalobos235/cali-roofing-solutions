@@ -14,32 +14,22 @@ export default function BeforeAfter() {
     <section className="section">
       <div className="container-narrow">
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {images.slice(0, 2).map((src, i) => (
+          <div className="space-y-6">
+            {images.map((src, i) => (
               <div
                 key={i}
-                className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl"
+                className="relative w-full overflow-hidden rounded-2xl"
               >
                 <Image
                   src={src}
                   alt={`Before and after project ${i + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={1280}
+                  height={i === 2 ? 720 : 427}
+                  className="w-full h-auto"
+                  sizes="(max-width: 1280px) 100vw, 1280px"
                 />
               </div>
             ))}
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delay={100}>
-          <div className="mt-6 relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
-            <Image
-              src={images[2]}
-              alt="Before and after project 3"
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
           </div>
         </ScrollReveal>
       </div>

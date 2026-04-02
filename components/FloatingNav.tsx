@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
+import { Calculator } from "lucide-react";
 
 export default function FloatingNav() {
   const t = useTranslations("nav");
@@ -39,6 +40,15 @@ export default function FloatingNav() {
           {link.label}
         </Link>
       ))}
+      <a
+        href="https://app.roofr.com/instant-estimator/09a432b4-f154-4013-8baa-893cf71f5d8c/CaliRoofingSolutions/welcome-question"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ml-1 inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-colors"
+      >
+        <Calculator className="h-3.5 w-3.5" />
+        Free Estimate
+      </a>
     </nav>
   );
 }

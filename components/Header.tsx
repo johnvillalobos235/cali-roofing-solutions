@@ -4,7 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Calculator } from "lucide-react";
+
+const ROOFR_URL =
+  "https://app.roofr.com/instant-estimator/09a432b4-f154-4013-8baa-893cf71f5d8c/CaliRoofingSolutions/welcome-question";
 import LanguageToggle from "./LanguageToggle";
 
 export default function Header() {
@@ -50,6 +53,15 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-3">
           <LanguageToggle />
           <a
+            href={ROOFR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-500 transition-colors whitespace-nowrap shadow-lg shadow-blue-600/25"
+          >
+            <Calculator className="h-4 w-4" />
+            Free Estimate
+          </a>
+          <a
             href="tel:+19517431437"
             className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black hover:bg-zinc-100 transition-colors whitespace-nowrap shadow-sm"
           >
@@ -81,6 +93,16 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <a
+            href={ROOFR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+            className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg"
+          >
+            <Calculator className="h-4 w-4" />
+            Free Instant Estimate
+          </a>
           <LanguageToggle />
           <a
             href="tel:+19517431437"
