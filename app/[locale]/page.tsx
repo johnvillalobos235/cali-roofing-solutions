@@ -8,7 +8,7 @@ import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinancingCTA from "@/components/FinancingCTA";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
-import BeforeAfter from "@/components/BeforeAfter";
+
 import ContactSection from "@/components/ContactSection";
 
 export default function HomePage() {
@@ -24,7 +24,6 @@ export default function HomePage() {
       <TestimonialsSection />
       <FinancingCTA />
       <PortfolioCarousel />
-      <BeforeAfter />
       <ContactSection />
     </>
   );
