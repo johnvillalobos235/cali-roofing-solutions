@@ -14,11 +14,11 @@ export default function ServicesGrid({
   showHeading = true,
 }: ServicesGridProps) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 sm:py-28">
       <div className="container-narrow">
         {showHeading && (
           <FadeIn>
-            <div className="mb-12">
+            <div className="mb-14">
               <SectionHeading
                 kicker={t(messages, "services.kicker")}
                 title={t(messages, "services.title")}
@@ -28,7 +28,7 @@ export default function ServicesGrid({
           </FadeIn>
         )}
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {siteConfig.services.map((service, i) => {
             const serviceMessages = tObject(
               messages,

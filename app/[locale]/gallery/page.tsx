@@ -35,18 +35,19 @@ export default async function GalleryPage({
         subtitle={t(messages, "portfolio.subtitle")}
         image="/images/hero-gallery.webp"
         showCtas={false}
+        compact
       />
-      <section className="py-20">
+      <section className="py-24 sm:py-28">
         <div className="container-narrow">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {siteConfig.portfolio.images.map((img, i) => (
               <FadeIn key={i} delay={(i % 3) * 100}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden group">
                   <Image
                     src={img.src}
                     alt={img.alt}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>

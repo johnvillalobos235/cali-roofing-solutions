@@ -13,6 +13,7 @@ interface HeroProps {
   subtitle?: string;
   image?: string;
   showCtas?: boolean;
+  compact?: boolean;
 }
 
 export default function Hero({
@@ -23,6 +24,7 @@ export default function Hero({
   subtitle,
   image,
   showCtas = true,
+  compact = false,
 }: HeroProps) {
   const heroTitle = title || t(messages, "hero.headline");
   const heroSubtitle = subtitle || t(messages, "hero.subheadline");
@@ -30,9 +32,12 @@ export default function Hero({
   const heroImage = image || siteConfig.hero.image;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background */}
-      {siteConfig.hero.backgroundType === "video" && siteConfig.hero.video ? (
+    <section
+      className={`relative flex items-end overflow-hidden ${
+        compact ? "min-h-[55vh]" : "min-h-[100svh]"
+      }`}
+    >
+      {!compact && siteConfig.hero.backgroundType === "video" && siteConfig.hero.video ? (
         <VideoEmbed
           video={siteConfig.hero.video}
           background
@@ -42,7 +47,7 @@ export default function Hero({
         heroImage && (
           <Image
             src={heroImage}
-            alt="Hero background"
+            alt=""
             fill
             className="object-cover"
             priority
@@ -53,30 +58,27 @@ export default function Hero({
 
       <GradientOverlay />
 
-      {/* Content */}
-      <div className="relative z-10 container-narrow py-32">
+      <div className="relative z-10 container-narrow w-full pb-24 pt-52 sm:pb-32">
         <div className="max-w-2xl space-y-6">
-          <p className="kicker text-white/70">{heroKicker}</p>
-          <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl tracking-tight">
+          <p className="kicker text-primary">{heroKicker}</p>
+          <h1
+            className={`font-bold tracking-tight text-white ${
+              compact
+                ? "text-3xl sm:text-4xl lg:text-5xl leading-[1.1]"
+                : "text-[2.75rem] sm:text-[3.5rem] lg:text-[4.25rem] leading-[1.05]"
+            }`}
+          >
             {heroTitle}
           </h1>
-          <p className="text-lg text-white/80 leading-relaxed max-w-lg">
+          <p className="text-[1.05rem] text-n-400 leading-relaxed max-w-lg">
             {heroSubtitle}
           </p>
           {showCtas && (
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button
-                href={`/${locale}/contact`}
-                variant="primary"
-                size="lg"
-              >
+              <Button href={`/${locale}/contact`} variant="primary" size="lg">
                 {t(messages, "hero.cta_primary")}
               </Button>
-              <Button
-                href={`/${locale}/gallery`}
-                variant="secondary"
-                size="lg"
-              >
+              <Button href={`/${locale}/gallery`} variant="secondary" size="lg">
                 {t(messages, "hero.cta_secondary")}
               </Button>
             </div>

@@ -8,14 +8,12 @@ interface TestimonialsProps {
   messages: Record<string, unknown>;
 }
 
-export default function Testimonials({
-  messages,
-}: TestimonialsProps) {
+export default function Testimonials({ messages }: TestimonialsProps) {
   return (
-    <section className="py-20 bg-n-50">
+    <section className="py-24 sm:py-28">
       <div className="container-narrow">
         <FadeIn>
-          <div className="mb-12 text-center">
+          <div className="mb-14 text-center">
             <SectionHeading
               kicker={t(messages, "testimonials.kicker")}
               title={t(messages, "testimonials.title")}
@@ -25,9 +23,9 @@ export default function Testimonials({
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
           {siteConfig.testimonials.items.map((testimonial, i) => (
-            <FadeIn key={i} delay={i * 100}>
+            <FadeIn key={i} delay={i * 120}>
               <TestimonialCard
                 name={testimonial.name}
                 role={testimonial.role}

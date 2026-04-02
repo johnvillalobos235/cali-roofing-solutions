@@ -12,9 +12,7 @@ interface PortfolioCarouselProps {
   messages: Record<string, unknown>;
 }
 
-export default function PortfolioCarousel({
-  messages,
-}: PortfolioCarouselProps) {
+export default function PortfolioCarousel({ messages }: PortfolioCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
@@ -28,97 +26,68 @@ export default function PortfolioCarousel({
 
   useEffect(() => {
     if (!emblaApi) return;
-
     const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
     emblaApi.on("select", onSelect);
-
     if (!initializedRef.current) {
       initializedRef.current = true;
-      // Read initial index without triggering a state update in the effect
-      requestAnimationFrame(() => {
-        setSelectedIndex(emblaApi.selectedScrollSnap());
-      });
+      requestAnimationFrame(() => setSelectedIndex(emblaApi.selectedScrollSnap()));
     }
-
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
+    return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi]);
 
   const images = siteConfig.portfolio.images;
 
+  const ArrowButton = ({ onClick, label, children }: { onClick: () => void; label: string; children: React.ReactNode }) => (
+    <button
+      onClick={onClick}
+      className="h-10 w-10 rounded-full border border-n-800 text-n-400 hover:bg-white hover:text-n-900 hover:border-white transition-all duration-200 flex items-center justify-center"
+      aria-label={label}
+    >
+      {children}
+    </button>
+  );
+
   return (
-    <section className="py-20 bg-n-50">
+    <section className="py-24 sm:py-28 bg-n-950">
       <div className="container-narrow">
-        <div className="flex items-end justify-between mb-10">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
           <SectionHeading
             kicker={t(messages, "portfolio.kicker")}
             title={t(messages, "portfolio.title")}
             subtitle={t(messages, "portfolio.subtitle")}
+            dark
           />
-          <div className="hidden sm:flex items-center gap-4">
-            <span className="text-sm text-n-500 tabular-nums">
-              {selectedIndex + 1}/{images.length}
+          <div className="flex items-center gap-4 shrink-0">
+            <span className="text-sm text-n-500 tabular-nums font-mono">
+              {String(selectedIndex + 1).padStart(2, "0")}/{String(images.length).padStart(2, "0")}
             </span>
             <div className="flex gap-2">
-              <button
-                onClick={scrollPrev}
-                className="p-2 rounded-full border border-n-800 text-n-600 hover:bg-n-900 hover:text-white transition-colors"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <button
-                onClick={scrollNext}
-                className="p-2 rounded-full border border-n-800 text-n-600 hover:bg-n-900 hover:text-white transition-colors"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
+              <ArrowButton onClick={scrollPrev} label="Previous slide">
+                <ChevronLeft className="h-4 w-4" />
+              </ArrowButton>
+              <ArrowButton onClick={scrollNext} label="Next slide">
+                <ChevronRight className="h-4 w-4" />
+              </ArrowButton>
             </div>
           </div>
         </div>
 
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-6">
+          <div className="flex gap-5">
             {images.map((img, i) => (
-              <div
-                key={i}
-                className="flex-none w-[85%] sm:w-[45%] lg:w-[30%]"
-              >
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <div key={i} className="flex-none w-[82%] sm:w-[44%] lg:w-[32%]">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden group">
                   <Image
                     src={img.src}
                     alt={img.alt}
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 30vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 82vw, (max-width: 1024px) 44vw, 32vw"
                   />
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Mobile controls */}
-        <div className="flex sm:hidden items-center justify-center gap-4 mt-6">
-          <button
-            onClick={scrollPrev}
-            className="p-2 rounded-full border border-n-800 text-n-600 hover:bg-n-900 hover:text-white transition-colors"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <span className="text-sm text-n-500 tabular-nums">
-            {selectedIndex + 1}/{images.length}
-          </span>
-          <button
-            onClick={scrollNext}
-            className="p-2 rounded-full border border-n-800 text-n-600 hover:bg-n-900 hover:text-white transition-colors"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
         </div>
       </div>
     </section>

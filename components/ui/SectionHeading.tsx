@@ -15,32 +15,22 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div
-      className={`space-y-3 ${align === "center" ? "text-center" : ""} ${
-        align === "center" ? "max-w-2xl mx-auto" : ""
-      }`}
+      className={`space-y-4 ${align === "center" ? "text-center mx-auto max-w-2xl" : "max-w-xl"}`}
     >
       {kicker && (
-        <p
-          className={`kicker ${
-            dark ? "text-n-400" : "text-primary"
-          }`}
-        >
+        <p className={`kicker ${dark ? "text-primary" : "text-primary"}`}>
           {kicker}
         </p>
       )}
       <h2
-        className={`text-3xl font-bold tracking-tight sm:text-4xl ${
+        className={`text-[2rem] sm:text-[2.5rem] font-bold tracking-tight leading-[1.1] ${
           dark ? "text-white" : "text-n-900"
         }`}
       >
         {title}
       </h2>
       {subtitle && (
-        <p
-          className={`text-base leading-relaxed ${
-            dark ? "text-n-400" : "text-n-600"
-          }`}
-        >
+        <p className={`text-[0.95rem] leading-relaxed ${dark ? "text-n-400" : "text-n-500"}`}>
           {subtitle}
         </p>
       )}

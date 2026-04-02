@@ -21,31 +21,29 @@ export default function Footer({ locale, messages }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-n-950 text-white">
-      <div className="container-narrow py-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          {/* Column 1: Logo + Description */}
-          <div className="space-y-4">
+    <footer className="bg-n-950 text-white border-t border-n-800/50">
+      <div className="container-narrow py-20">
+        <div className="grid grid-cols-1 gap-14 md:grid-cols-3">
+          <div className="space-y-5">
             <Image
               src="/images/logo.webp"
               alt={siteConfig.company.name}
-              width={160}
-              height={40}
-              className="h-10 w-auto object-contain"
+              width={140}
+              height={32}
+              className="h-8 w-auto object-contain opacity-80"
             />
-            <p className="text-sm text-n-400 max-w-xs leading-relaxed">
+            <p className="text-sm text-n-500 max-w-xs leading-relaxed">
               {t(messages, "footer.description")}
             </p>
             {siteConfig.company.license && (
-              <p className="text-xs text-n-400 tracking-[0.25em]">
+              <p className="text-[0.65rem] text-n-600 tracking-[0.3em] uppercase">
                 {siteConfig.company.license}
               </p>
             )}
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-n-400">
+          <div className="space-y-5">
+            <h3 className="kicker text-n-500">
               {t(messages, "footer.quick_links")}
             </h3>
             <nav className="flex flex-col gap-3">
@@ -53,7 +51,7 @@ export default function Footer({ locale, messages }: FooterProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-n-400 hover:text-white transition-colors"
+                  className="text-sm text-n-400 hover:text-white transition-colors duration-200"
                 >
                   {link.label}
                 </Link>
@@ -61,9 +59,8 @@ export default function Footer({ locale, messages }: FooterProps) {
             </nav>
           </div>
 
-          {/* Column 3: Contact */}
-          <div className="space-y-4">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-n-400">
+          <div className="space-y-5">
+            <h3 className="kicker text-n-500">
               {t(messages, "footer.contact_title")}
             </h3>
             <div className="space-y-3">
@@ -71,9 +68,9 @@ export default function Footer({ locale, messages }: FooterProps) {
                 <a
                   key={phone}
                   href={`tel:${phone.replace(/\D/g, "")}`}
-                  className="flex items-center gap-2 text-sm text-n-400 hover:text-white transition-colors"
+                  className="flex items-center gap-3 text-sm text-n-400 hover:text-white transition-colors duration-200"
                 >
-                  <Phone className="h-4 w-4 shrink-0 text-n-500" />
+                  <Phone className="h-3.5 w-3.5 shrink-0 text-n-600" />
                   {phone}
                 </a>
               ))}
@@ -85,18 +82,14 @@ export default function Footer({ locale, messages }: FooterProps) {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-n-800">
+      <div className="border-t border-n-800/50">
         <div className="container-narrow py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-n-400">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[0.7rem] text-n-600">
             <p>
-              &copy; {year} {siteConfig.company.name}.{" "}
-              {t(messages, "footer.rights")}
+              &copy; {year} {siteConfig.company.name}. {t(messages, "footer.rights")}
             </p>
-            <p className="tracking-[0.25em]">
+            <p className="tracking-[0.2em] uppercase">
               {t(messages, "footer.credentials")}
-              {siteConfig.company.license &&
-                ` • ${siteConfig.company.license}`}
             </p>
           </div>
         </div>

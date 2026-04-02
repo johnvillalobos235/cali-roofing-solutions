@@ -34,6 +34,7 @@ export default async function ServicesPage({
         subtitle={t(messages, "services.subtitle")}
         image="/images/hero-services.webp"
         showCtas={false}
+        compact
       />
       <ServicesGrid messages={messages} showHeading={false} />
       <CtaBanner locale={locale} messages={messages} />

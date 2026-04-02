@@ -14,16 +14,16 @@ export default function Statistics({ messages }: StatisticsProps) {
   ];
 
   return (
-    <section className="py-20 bg-n-950">
+    <section className="py-24 sm:py-28 bg-n-950">
       <div className="container-narrow">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 text-center">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 text-center">
           {siteConfig.stats.map((stat, i) => (
-            <FadeIn key={i} delay={i * 100}>
-              <div className="space-y-2">
-                <p className="text-4xl font-bold text-white sm:text-5xl">
+            <FadeIn key={i} delay={i * 120}>
+              <div className="space-y-3">
+                <p className="text-5xl sm:text-6xl font-bold text-white tracking-tight">
                   {stat.value}
                 </p>
-                <p className="text-sm text-n-400 uppercase tracking-widest">
+                <p className="kicker text-n-500">
                   {statLabels[i] || stat.label}
                 </p>
               </div>

@@ -80,8 +80,9 @@ export default async function ContactPage({
         subtitle={t(messages, "contact.subtitle")}
         image="/images/hero-contact.webp"
         showCtas={false}
+        compact
       />
-      <section className="py-20">
+      <section className="py-24 sm:py-28">
         <div className="container-narrow">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {/* Contact Info Cards */}
