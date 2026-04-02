@@ -89,14 +89,14 @@ export default function PortfolioCarousel() {
           {portfolioImages.map((src, i) => (
             <div
               key={i}
-              className="relative shrink-0 w-[320px] h-[220px] overflow-hidden rounded-3xl transition-all duration-500 ease-out"
+              className="relative shrink-0 w-[420px] h-[300px] overflow-hidden rounded-3xl transition-all duration-500 ease-out"
             >
               <Image
                 src={src}
                 alt={`Project ${i + 1}`}
                 fill
                 className="object-cover pointer-events-none"
-                sizes="320px"
+                sizes="420px"
                 draggable={false}
               />
             </div>

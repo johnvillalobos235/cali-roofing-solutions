@@ -51,9 +51,9 @@ export default function Header() {
           <LanguageToggle />
           <a
             href="tel:+19517431437"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-medium text-black hover:bg-zinc-100 transition-colors whitespace-nowrap"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black hover:bg-zinc-100 transition-colors whitespace-nowrap shadow-sm"
           >
-            <Phone className="h-3.5 w-3.5" />
+            <Phone className="h-4 w-4" />
             (951) 743-1437
           </a>
         </div>

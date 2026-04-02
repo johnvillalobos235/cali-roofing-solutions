@@ -60,17 +60,18 @@ export default function TestimonialsSection() {
 
         {/* Google Review Screenshots */}
         <ScrollReveal delay={200}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {reviewScreenshots.map((src, i) => (
               <div
                 key={i}
-                className="relative aspect-[5/2] rounded-xl overflow-hidden shadow-sm"
+                className="relative rounded-2xl overflow-hidden shadow-md bg-white border border-slate-100"
               >
                 <Image
                   src={src}
                   alt={`Google Review ${i + 1}`}
-                  fill
-                  className="object-cover"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-contain"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>

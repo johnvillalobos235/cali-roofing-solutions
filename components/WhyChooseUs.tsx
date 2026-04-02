@@ -41,14 +41,14 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, i) => (
             <ScrollReveal key={feature.key} delay={i * 100}>
-              <div className="text-center space-y-4">
-                <div className="mx-auto relative h-16 w-16">
+              <div className="text-center space-y-5">
+                <div className="mx-auto relative h-20 w-20">
                   <Image
                     src={feature.icon}
                     alt={t(`${feature.key}.title`)}
                     fill
                     className="object-contain"
-                    sizes="64px"
+                    sizes="80px"
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900">

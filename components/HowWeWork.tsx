@@ -46,16 +46,16 @@ export default function HowWeWork() {
           {steps.map((step, i) => (
             <ScrollReveal key={step.key} delay={i * 150}>
               <div className="text-center space-y-4">
-                <div className="mx-auto relative h-20 w-20 rounded-full overflow-hidden">
+                <div className="mx-auto relative h-24 w-24 rounded-full overflow-hidden ring-2 ring-white/10">
                   <Image
                     src={step.icon}
                     alt={t(`${step.key}.title`)}
                     fill
                     className="object-cover"
-                    sizes="80px"
+                    sizes="96px"
                   />
                 </div>
-                <div className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-white text-slate-900 text-sm font-bold">
+                <div className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white text-slate-900 text-sm font-bold shadow-lg">
                   {step.num}
                 </div>
                 <h3 className="text-lg font-semibold text-white">

@@ -40,22 +40,22 @@ export default function StatsSection() {
 
         {/* Certifications */}
         <ScrollReveal delay={200}>
-          <div className="flex flex-wrap items-center justify-center gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-10">
             {certifications.map((cert, i) => (
-              <div key={i} className="relative h-16 w-32">
+              <div key={i} className="relative h-20 w-40">
                 <Image
                   src={cert}
                   alt={`Certification ${i + 1}`}
                   fill
                   className="object-contain"
-                  sizes="128px"
+                  sizes="160px"
                 />
               </div>
             ))}
             {/* Google Review Badge */}
-            <div className="flex items-center gap-2 rounded-full bg-slate-50 px-4 py-2 border border-slate-200">
-              <span className="text-yellow-500 text-sm">★★★★★</span>
-              <span className="text-xs font-semibold text-slate-700">
+            <div className="flex items-center gap-3 rounded-full bg-slate-50 px-6 py-3 border border-slate-200 shadow-sm">
+              <span className="text-yellow-500 text-lg">★★★★★</span>
+              <span className="text-sm font-semibold text-slate-700">
                 5/5 · 100+ Reviews
               </span>
             </div>

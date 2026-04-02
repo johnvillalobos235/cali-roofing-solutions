@@ -38,13 +38,13 @@ export default function FinancingCTA() {
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <div className="relative aspect-[6/5] max-w-sm mx-auto">
+            <div className="relative aspect-[6/5] max-w-md mx-auto">
               <Image
                 src="https://caliroofingsolutions.com/wp-content/uploads/2025/12/aa-payment-opt-2.png"
                 alt="Financing Options"
                 fill
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 400px"
+                sizes="(max-width: 768px) 100vw, 500px"
               />
             </div>
           </ScrollReveal>
