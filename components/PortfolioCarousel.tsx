@@ -9,7 +9,6 @@ import ImageCarousel from "./ImageCarousel";
 const portfolioImages = [
   "https://caliroofing.wordpress.com/wp-content/uploads/2025/10/cali-roof-1-1-edited.webp",
   "https://caliroofing.wordpress.com/wp-content/uploads/2025/11/dji_0267-2-1-edited-4.jpg",
-  "https://caliroofing.wordpress.com/wp-content/uploads/2025/10/cali-roofing-7-1-edited.webp",
   "https://caliroofing.wordpress.com/wp-content/uploads/2025/11/dji_0266-2-min-edited.jpg",
   "https://caliroofing.wordpress.com/wp-content/uploads/2025/10/cali-roofing-3-1-edited.webp",
   "https://caliroofing.wordpress.com/wp-content/uploads/2025/10/cali-roofing-4-1-edited.webp",
@@ -44,10 +43,12 @@ export default function PortfolioCarousel() {
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
-          <ImageCarousel
-            images={portfolioImages}
-            aspectRatio="aspect-[16/9]"
-          />
+          <div className="max-w-3xl mx-auto">
+            <ImageCarousel
+              images={portfolioImages}
+              aspectRatio="aspect-[4/3]"
+            />
+          </div>
         </ScrollReveal>
 
         {/* Mobile View All */}
